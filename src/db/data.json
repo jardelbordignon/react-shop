@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "_id": "boot1",
+      "image": "/images/boot1.jpg",
+      "title": "boot 1",
+      "description": "About boot 1",
+      "price": 220,
+      "availableSizes": ["X", "L", "XL", "XXL"]
+    },
+    {
+      "_id": "boot2",
+      "image": "/images/boot2.jpg",
+      "title": "boot 2",
+      "description": "About boot 2",
+      "price": 325,
+      "availableSizes": ["X", "M", "L"]
+    },
+    {
+      "_id": "boot3",
+      "image": "/images/boot3.jpg",
+      "title": "boot 3",
+      "description": "About boot 3",
+      "price": 299,
+      "availableSizes": ["X", "M", "L"]
+    },
+    {
+      "_id": "boot4",
+      "image": "/images/boot4.jpg",
+      "title": "boot 4",
+      "description": "About boot 4",
+      "price": 196,
+      "availableSizes": ["X", "M", "L"]
+    },
+    {
+      "_id": "boot5",
+      "image": "/images/boot5.jpg",
+      "title": "boot 5",
+      "description": "About boot 5",
+      "price": 199.75,
+      "availableSizes": ["X", "M", "L"]
+    }
+  ]
+}
