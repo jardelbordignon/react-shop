@@ -220,3 +220,27 @@ button {
 .right {
   text-align: right;
 }
+
+/* checkout form */
+form {
+  width: 100%;
+  border-top: .1rem solid #c0c0c0;
+}
+form input {
+  border: 0;
+  outline: 0;
+  padding: 8px;
+  border-radius: 5px;
+  background: #c0c0c0;
+  margin-top: 3px;
+}
+.form-container {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+.form-container li {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
