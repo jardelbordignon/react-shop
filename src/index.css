@@ -68,25 +68,36 @@ button {
 .flex {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .flex-column {
   flex-direction: column;
 }
-.flex.flex-center {
+.flex.justify-center {
   justify-content: center;
 }
-.flex.flex-right {
+.flex.justify-between {
+  justify-content: space-between;
+}
+.flex.justify-left {
   justify-content: flex-start;
 }
-.flex.flex-left {
+.flex.justify-right {
   justify-content: flex-end;
 }
-.flex.flex-top {
+.flex.align-top {
   align-items: flex-start;
 }
-.flex.flex-bottom {
+.flex.align-bottom {
   align-items: flex-end;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.pv-20 {
+  padding: 20px 0;
 }
 
 .content {
@@ -156,4 +167,13 @@ button {
 .product-price div,
 .product-price button {
   text-align: center;
+}
+
+/* filter */
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: .1rem solid #c0c0c0; 
 }
