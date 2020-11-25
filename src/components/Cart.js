@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade'
 
 import formatValue from '../utils/formatValue'
 
@@ -42,24 +43,27 @@ export default class Cart extends Component {
         </div>
         <div>
           <div className='cart'>
-            <ul className='cart-items'>
-              { cartItems.map( item => (
-                <li key={item._id}>
-                  <div>
-                    <img src={item.image} alt={item.title} />
-                  </div>
-                  <div>
-                    <div>{item.title}</div>
-                    <div className="right">
-                      {item.count} X { formatValue(item.price) }
-                      <button onClick={() => this.props.removeFromCart(item)}>
-                        Excluir {item.count > 1 && ' 1'}
-                      </button>
+
+            <Fade left cascade>
+              <ul className='cart-items'>
+                { cartItems.map( item => (
+                  <li key={item._id}>
+                    <div>
+                      <img src={item.image} alt={item.title} />
                     </div>
-                  </div>
-                </li>
-              )) }
-            </ul>
+                    <div>
+                      <div>{item.title}</div>
+                      <div className="right">
+                        {item.count} X { formatValue(item.price) }
+                        <button onClick={() => this.props.removeFromCart(item)}>
+                          Excluir {item.count > 1 && ' 1'}
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                )) }
+              </ul>
+            </Fade>
           </div>
 
           { !!cartItems.length && 
@@ -75,27 +79,29 @@ export default class Cart extends Component {
               </div>
               
               { this.state.showCheckout &&
-                <div className='cart'>
-                  <form onSubmit={this.createOrder}>
-                    <ul className='form-container'>
-                      <li>
-                        <label htmlFor='name'>Nome</label>
-                        <input name='name' required onChange={this.handleOnChange} />
-                      </li>
-                      <li>
-                        <label htmlFor='email'>E-mail</label>
-                        <input name='email' type='email' required onChange={this.handleOnChange} />
-                      </li>
-                      <li>
-                        <label htmlFor='address'>Endereço</label>
-                        <input name='address' required onChange={this.handleOnChange} />
-                      </li>
-                      <li>
-                        <button type='submit'>Efetuar pagamento</button>
-                      </li>
-                    </ul>
-                  </form>
-                </div>
+                <Fade right cascade>
+                  <div className='cart'>
+                    <form onSubmit={this.createOrder}>
+                      <ul className='form-container'>
+                        <li>
+                          <label htmlFor='name'>Nome</label>
+                          <input name='name' required onChange={this.handleOnChange} />
+                        </li>
+                        <li>
+                          <label htmlFor='email'>E-mail</label>
+                          <input name='email' type='email' required onChange={this.handleOnChange} />
+                        </li>
+                        <li>
+                          <label htmlFor='address'>Endereço</label>
+                          <input name='address' required onChange={this.handleOnChange} />
+                        </li>
+                        <li>
+                          <button type='submit'>Efetuar pagamento</button>
+                        </li>
+                      </ul>
+                    </form>
+                  </div>
+                </Fade>
               }
             </>
           }
