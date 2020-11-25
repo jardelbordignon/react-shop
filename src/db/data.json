@@ -14,7 +14,7 @@
       "title": "boot 2",
       "description": "About boot 2",
       "price": 325,
-      "availableSizes": ["X", "M", "L"]
+      "availableSizes": ["XS", "L", "XL"]
     },
     {
       "_id": "boot3",
@@ -22,7 +22,7 @@
       "title": "boot 3",
       "description": "About boot 3",
       "price": 299,
-      "availableSizes": ["X", "M", "L"]
+      "availableSizes": ["S", "M", "L"]
     },
     {
       "_id": "boot4",
@@ -30,7 +30,7 @@
       "title": "boot 4",
       "description": "About boot 4",
       "price": 196,
-      "availableSizes": ["X", "M", "L"]
+      "availableSizes": ["XS", "S", "XXL"]
     },
     {
       "_id": "boot5",
@@ -38,7 +38,23 @@
       "title": "boot 5",
       "description": "About boot 5",
       "price": 199.75,
-      "availableSizes": ["X", "M", "L"]
+      "availableSizes": ["L", "XL", "XXL"]
+    },
+    {
+      "_id": "boot6",
+      "image": "/images/boot6.jpg",
+      "title": "boot 6",
+      "description": "About boot 6",
+      "price": 199.75,
+      "availableSizes": ["XS", "M", "XL"]
+    },
+    {
+      "_id": "boot7",
+      "image": "/images/boot7.jpg",
+      "title": "boot 7",
+      "description": "About boot 7",
+      "price": 199.75,
+      "availableSizes": ["XS", "L", "XL"]
     }
   ]
 }
