@@ -54,7 +54,7 @@ a {
   cursor: pointer;
 }
 a:hover {
-  color: #36CF82;
+  color: #203040;
 }
 
 button {
@@ -63,6 +63,8 @@ button {
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+  background: #203040;
+  color: #fff;
 }
 
 .flex {
@@ -137,7 +139,6 @@ button {
   top: 340px;
   right: 50px;
   opacity: 0;
-  background-color: #36CF82;
   transition: opacity 0.6s;
 }
 .products li:hover button {
@@ -176,4 +177,46 @@ button {
   padding: 1rem;
   margin: 1rem;
   border-bottom: .1rem solid #c0c0c0; 
+}
+
+
+/* index.css */
+.cart {
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+
+.cart-header {
+  border-bottom: .1rem solid #c0c0c0;
+}
+
+.cart-items {
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.cart-items img {
+  width: 5rem;
+}
+
+.cart-items li {
+  display: flex;
+}
+
+.cart-items li div {
+  padding: .5rem;
+}
+
+.cart-items li div:last-child {
+  flex: 1;
+}
+
+.cart-items li div button {
+  margin-left: 5px;
+}
+
+.right {
+  text-align: right;
 }
