@@ -5,6 +5,7 @@ import Zoom from 'react-reveal/Zoom'
 import { connect } from 'react-redux'
 
 import { fetchProducts } from '../redux/actions/productActions'
+import { addToCart } from '../redux/actions/cartActions'
 import formatValue from '../utils/formatValue'
 
 class Products extends Component {
@@ -95,8 +96,10 @@ class Products extends Component {
   }
 }
 
-export default connect(state => ({
+export default connect(
+  state => ({
     products: state.products.filteredItems
   }), {
-  fetchProducts
+  fetchProducts,
+  addToCart
 })(Products)
