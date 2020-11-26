@@ -6,7 +6,7 @@ import { productsReducer } from './reducers/productsReducer'
 const initalState = {}
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
-const store =createStore(
+const store = createStore(
   combineReducers({
     products: productsReducer
   }),

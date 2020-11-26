@@ -33,6 +33,8 @@ class Products extends Component {
     if(!this.props.products)
      return <div>Carregando...</div>
     
+    //return <div>{JSON.stringify(this.props)}</div>
+
     return (
       <>
       <Fade bottom cascade>
@@ -93,6 +95,8 @@ class Products extends Component {
   }
 }
 
-export default connect(state => ({products: state.products.items }), {
+export default connect(state => ({
+    products: state.products.filteredItems
+  }), {
   fetchProducts
 })(Products)
