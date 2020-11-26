@@ -2,15 +2,21 @@ import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade'
 import Modal from 'react-modal'
 import Zoom from 'react-reveal/Zoom'
+import { connect } from 'react-redux'
 
+import { fetchProducts } from '../redux/actions/productActions'
 import formatValue from '../utils/formatValue'
 
-export default class Products extends Component {
+class Products extends Component {
   constructor(props) {
     super(props)
     this.state = {
       product: null,
     }
+  }
+
+  componentDidMount() {
+    this.props.fetchProducts()
   }
 
   openModal = product => {
@@ -23,6 +29,10 @@ export default class Products extends Component {
 
   render() {
     const { product } = this.state
+
+    if(!this.props.products)
+     return <div>Carregando...</div>
+    
     return (
       <>
       <Fade bottom cascade>
@@ -82,3 +92,7 @@ export default class Products extends Component {
     )
   }
 }
+
+export default connect(state => ({products: state.products.items }), {
+  fetchProducts
+})(Products)
